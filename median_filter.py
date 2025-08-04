@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load image
-img = cv.imread('opencv_logo.png')
+img = cv.imread('afa_innovation.png')
 assert img is not None, "file could not be read, check with os.path.exists()"
 
 # Add salt-and-pepper noise (50% of pixels corrupted)
