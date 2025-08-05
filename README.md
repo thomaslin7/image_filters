@@ -86,7 +86,7 @@ blur = cv.GaussianBlur(img, (21, 21), 50)
 
 **Purpose**: Noise reduction, especially effective against salt-and-pepper noise.
 
-**Process**: Replaces each pixel with the median value of its neighborhood
+**Kernel**: Replaces each pixel with the median value of its neighborhood
 ```python
 # 5x5 median filter
 median = cv.medianBlur(noisy_img, 5)
@@ -105,9 +105,14 @@ median = cv.medianBlur(noisy_img, 5)
 
 **Kernel**: High-pass filter that emphasizes differences
 ```python
+# Define sharpening kernel
 kernel = np.array([[0, -1, 0],
-                   [-1, 5, -1],
-                   [0, -1, 0]])
+                  [-1, 5,-1],
+                  [0, -1, 0]])
+
+# Apply sharpening filter
+sharpened = cv2.filter2D(img, -1, kernel)
+
 ```
 
 **Applications**:
