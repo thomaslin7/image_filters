@@ -20,11 +20,10 @@ This repository demonstrates:
    - [Sharpening Filter](#sharpening-filter)
    - [Laplacian Filter](#laplacian-filter)
    - [Sobel Filter](#sobel-filter)
-3. [Additional Utilities](#additional-utilities)
-4. [Running the Examples](#running-the-examples)
-5. [Educational Resources](#educational-resources)
+3. [Running the Examples](#running-the-examples)
+4. [Educational Resources](#educational-resources)
 
-## 🔬 Fundamentals
+### 🔬 Fundamentals
 
 ### What is Image Filtering?
 
@@ -45,7 +44,7 @@ Kernel: [1/9  1/9  1/9]
 This creates a 3x3 averaging filter
 ```
 
-## 🎨 Filter Types
+### 🎨 Filter Types
 
 ### Averaging Filter
 
@@ -165,31 +164,7 @@ sobel_y = cv.Sobel(img, cv.CV_64F, 0, 1)
 
 **Educational Value**: Demonstrates directional filtering and the relationship between gradients and edges.
 
-## 🛠️ Additional Utilities
-
-### RGB to Grayscale Conversion
-
-**File**: `rgb2grayscale.py`
-
-**Purpose**: Converting color images to grayscale for processing.
-
-**Process**: Weighted combination of RGB channels
-```python
-grayscale = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-```
-
-### Grid Visualization
-
-**File**: `draw_grids.py`
-
-**Purpose**: Visualizing pixel-level operations and convolution windows.
-
-**Features**:
-- Overlays grid on grayscale images
-- Helps understand pixel neighborhoods
-- Demonstrates convolution window movement
-
-## 🚀 Running the Examples
+### 🚀 Running the Examples
 
 ### Prerequisites
 
@@ -219,7 +194,7 @@ Each script will display:
 - **Filtered Image**: The result after applying the filter
 - **Comparison**: Side-by-side or multi-panel visualization
 
-## 📖 Educational Resources
+### 📖 Educational Resources
 
 ### Key Concepts Covered
 
