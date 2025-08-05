@@ -12,7 +12,7 @@ This repository demonstrates:
 
 ## 📚 Table of Contents
 
-1. [Fundamentals](#🔬-fundamentals)
+1. [Fundamentals](#-fundamentals)
 2. [Filter Types](#filter-types)
    - [Averaging Filter](#averaging-filter)
    - [Gaussian Filter](#gaussian-filter)
