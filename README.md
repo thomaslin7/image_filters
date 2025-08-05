@@ -38,8 +38,8 @@ Image filtering is a fundamental operation in computer vision where we apply mat
 
 ```
 Kernel: [1/9  1/9  1/9]
-       [1/9  1/9  1/9]
-       [1/9  1/9  1/9]
+        [1/9  1/9  1/9]
+        [1/9  1/9  1/9]
 
 This creates a 3x3 averaging filter
 ```
