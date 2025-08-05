@@ -143,7 +143,7 @@ laplacian = cv.Laplacian(img, cv.CV_64F)
 
 **Purpose**: Directional edge detection using first-order derivatives.
 
-**Kernels**: Separate kernels for horizontal and vertical edges
+**Kernel**: Separate kernels for horizontal and vertical edges
 ```python
 # Detects vertical edges
 sobel_x = cv.Sobel(img, cv.CV_64F, 1, 0)
