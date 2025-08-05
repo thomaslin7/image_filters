@@ -55,7 +55,7 @@ This creates a 3x3 averaging filter
 **Kernel**: Uniform weights (all elements equal)
 ```python
 # 25x25 averaging kernel
-blur = cv.blur(img, (25, 25))
+averaging = cv.blur(img, (25, 25))
 ```
 
 **Applications**:
@@ -71,8 +71,8 @@ blur = cv.blur(img, (25, 25))
 
 **Kernel**: Gaussian weights (center pixels have higher influence)
 ```python
-# Gaussian blur with 21x21 kernel, sigma=50
-blur = cv.GaussianBlur(img, (21, 21), 50)
+# Gaussian blur with 21x21 kernel, sigma=10
+gaussian = cv.GaussianBlur(img, (21, 21), 10)
 ```
 
 **Applications**:
@@ -111,7 +111,7 @@ kernel = np.array([[0, -1, 0],
                   [0, -1, 0]])
 
 # Apply sharpening filter
-sharpened = cv2.filter2D(img, -1, kernel)
+sharpened = cv.filter2D(img, -1, kernel)
 
 ```
 
@@ -126,10 +126,10 @@ sharpened = cv2.filter2D(img, -1, kernel)
 
 **Purpose**: Edge detection using second-order derivatives.
 
-**Process**: Detects rapid intensity changes
+**Kernel**: A filter that detects rapid intensity changes
 ```python
 # Laplacian edge detection
-edges = cv.Laplacian(img, cv.CV_64F)
+laplacian = cv.Laplacian(img, cv.CV_64F)
 ```
 
 **Applications**:
@@ -145,10 +145,10 @@ edges = cv.Laplacian(img, cv.CV_64F)
 
 **Kernels**: Separate kernels for horizontal and vertical edges
 ```python
-# Horizontal edges (vertical gradients)
+# Detects vertical edges
 sobel_x = cv.Sobel(img, cv.CV_64F, 1, 0)
 
-# Vertical edges (horizontal gradients)
+# Detects horizontal edges
 sobel_y = cv.Sobel(img, cv.CV_64F, 0, 1)
 ```
 
@@ -176,8 +176,6 @@ python median_filter.py
 python sharpening_filter.py
 python laplacian_filter.py
 python sobel_filter.py
-python rgb2grayscale.py
-python draw_grids.py
 ```
 
 ### Expected Output
@@ -195,7 +193,6 @@ Each script will display:
 2. **Kernel Design**: How different matrices produce different effects
 3. **Linear vs Non-linear Filters**: Averaging vs Median filtering
 4. **Edge Detection**: First and second-order derivative methods
-5. **Noise Types**: Understanding different noise characteristics
 
 ### Practical Exercises
 
