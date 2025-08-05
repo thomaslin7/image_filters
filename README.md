@@ -23,7 +23,7 @@ This repository demonstrates:
 3. [Running the Examples](#running-the-examples)
 4. [Educational Resources](#educational-resources)
 
-### 🔬 Fundamentals
+## 🔬 Fundamentals
 
 ### What is Image Filtering?
 
@@ -44,7 +44,7 @@ Kernel: [1/9  1/9  1/9]
 This creates a 3x3 averaging filter
 ```
 
-### 🎨 Filter Types
+## 🎨 Filter Types
 
 ### Averaging Filter
 
@@ -164,7 +164,7 @@ sobel_y = cv.Sobel(img, cv.CV_64F, 0, 1)
 
 **Educational Value**: Demonstrates directional filtering and the relationship between gradients and edges.
 
-### 🚀 Running the Examples
+## 🚀 Running the Examples
 
 ### Prerequisites
 
@@ -194,7 +194,7 @@ Each script will display:
 - **Filtered Image**: The result after applying the filter
 - **Comparison**: Side-by-side or multi-panel visualization
 
-### 📖 Educational Resources
+## 📖 Educational Resources
 
 ### Key Concepts Covered
 
