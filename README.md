@@ -63,8 +63,6 @@ blur = cv.blur(img, (25, 25))
 - Pre-processing for other operations
 - Creating soft, blurred effects
 
-**Educational Value**: Demonstrates the simplest form of spatial filtering where all neighbors contribute equally.
-
 ### Gaussian Filter
 
 **File**: `gaussian_filter.py`
@@ -82,8 +80,6 @@ blur = cv.GaussianBlur(img, (21, 21), 50)
 - Pre-processing for edge detection
 - Creating natural-looking blur effects
 
-**Educational Value**: Shows how different weight distributions affect filtering results. Gaussian filters preserve edges better than simple averaging.
-
 ### Median Filter
 
 **File**: `median_filter.py`
@@ -100,8 +96,6 @@ median = cv.medianBlur(noisy_img, 5)
 - Salt-and-pepper noise removal
 - Preserving edges while reducing noise
 - Medical imaging preprocessing
-
-**Educational Value**: Demonstrates non-linear filtering and why median is superior to mean for certain noise types.
 
 ### Sharpening Filter
 
@@ -121,8 +115,6 @@ kernel = np.array([[0, -1, 0],
 - Detail recovery after blurring
 - Pre-processing for feature detection
 
-**Educational Value**: Shows how high-pass filters work and the relationship between blurring and sharpening.
-
 ### Laplacian Filter
 
 **File**: `laplacian_filter.py`
@@ -139,8 +131,6 @@ edges = cv.Laplacian(img, cv.CV_64F)
 - Edge detection
 - Zero-crossing detection
 - Image segmentation
-
-**Educational Value**: Introduces second-order derivatives and their role in edge detection.
 
 ### Sobel Filter
 
@@ -161,8 +151,6 @@ sobel_y = cv.Sobel(img, cv.CV_64F, 0, 1)
 - Directional edge detection
 - Gradient magnitude and direction
 - Feature extraction
-
-**Educational Value**: Demonstrates directional filtering and the relationship between gradients and edges.
 
 ## 🚀 Running the Examples
 
