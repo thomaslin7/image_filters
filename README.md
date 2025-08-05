@@ -12,7 +12,7 @@ This repository demonstrates:
 
 ## 📚 Table of Contents
 
-1. [Fundamentals](#fundamentals)
+1. [Fundamentals](#-fundamentals)
 2. [Filter Types](#filter-types)
    - [Averaging Filter](#averaging-filter)
    - [Gaussian Filter](#gaussian-filter)
@@ -192,44 +192,12 @@ Each script will display:
 4. **Edge Detection**: First and second-order derivative methods
 5. **Noise Types**: Understanding different noise characteristics
 
-### Advanced Topics
-
-- **Frequency Domain**: Relationship to Fourier transforms
-- **Filter Design**: Creating custom kernels for specific applications
-- **Performance Optimization**: Efficient convolution implementations
-- **Real-time Applications**: Video processing considerations
-
 ### Practical Exercises
 
 1. **Kernel Experimentation**: Modify kernel values and observe effects
 2. **Parameter Tuning**: Adjust kernel sizes and sigma values
 3. **Combination Filters**: Apply multiple filters in sequence
 4. **Custom Kernels**: Design filters for specific applications
-
-## 🎓 Teaching Notes
-
-### For Instructors
-
-- **Progressive Complexity**: Start with averaging, progress to Gaussian, then edge detection
-- **Visual Demonstrations**: Use the grid visualization to show convolution process
-- **Parameter Exploration**: Encourage students to experiment with different values
-- **Real-world Context**: Connect filters to applications in robotics and automation
-
-### For Students
-
-- **Hands-on Learning**: Run each example and observe the differences
-- **Parameter Tuning**: Experiment with kernel sizes and parameters
-- **Documentation**: Add comments explaining what each filter does
-- **Extension Projects**: Implement additional filters or combine existing ones
-
-## 🤝 Contributing
-
-This repository is designed for educational purposes. Contributions that enhance learning value are welcome:
-
-- Additional filter implementations
-- Improved visualizations
-- Educational explanations
-- Real-world application examples
 
 ## 📄 License
 
