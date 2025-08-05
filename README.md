@@ -13,15 +13,15 @@ This repository demonstrates:
 ## 📚 Table of Contents
 
 1. [Fundamentals](#-fundamentals)
-2. [Filter Types](#filter-types)
+2. [Filter Types](#-filter-types)
    - [Averaging Filter](#averaging-filter)
    - [Gaussian Filter](#gaussian-filter)
    - [Median Filter](#median-filter)
    - [Sharpening Filter](#sharpening-filter)
    - [Laplacian Filter](#laplacian-filter)
    - [Sobel Filter](#sobel-filter)
-3. [Running the Examples](#running-the-examples)
-4. [Educational Resources](#educational-resources)
+3. [Running the Examples](#-running-the-examples)
+4. [Educational Resources](#-educational-resources)
 
 ## 🔬 Fundamentals
 
