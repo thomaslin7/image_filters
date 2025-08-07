@@ -1,4 +1,4 @@
-# Image Filters: Computer Vision Fundamentals
+# Computer Vision Fundamentals: Image Filters
 
 A comprehensive collection of image filtering techniques using 2D convolution and various kernels. This repository serves as an educational resource for understanding fundamental computer vision concepts, particularly image filtering and convolution operations.
 
