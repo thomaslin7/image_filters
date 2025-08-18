@@ -187,56 +187,60 @@ Each script will display:
 
 ## 📝 Homework
 
-Complete the following tasks to practice 2D convolution and classic image filters. Aim to finish in 60–90 minutes.
+Design a creative, student-driven mini-project to solve a real image problem using 2D convolution and classic filters. Aim to finish in about 60 minutes.
 
 ### Instructions
 
-- Use `afa_innovation.png` (or your own image) as input.
-- Install dependencies if needed: `pip install opencv-python numpy matplotlib`.
-- Save intermediate results to a `results/` folder (create if missing).
+- Use your own photo (phone/real-life) or a public image; you may also use `afa_innovation.png` for comparison.
+- Define a concrete problem present in the image (e.g., noise, blur, low contrast, weak edges). You can also inject a controlled problem (e.g., add Gaussian noise or salt-and-pepper noise, motion blur, low-light).
+- Work from first principles: you may reference the example scripts, but do not follow them step-by-step. Make design choices and justify them.
+- Create a `results/` folder to save outputs and a short write-up.
 
 ### Tasks
 
-1. Grayscale Conversion (5–10 min)
-   - Convert the input image to grayscale using `rgb2grayscale.py` or OpenCV's `cv.cvtColor(img, cv.COLOR_BGR2GRAY)`.
-   - Save as `results/grayscale.png`.
+1. Problem Statement & Data
+   - Pick 1–3 images and write 2–3 sentences describing the target problem you want to fix (or simulate).
+   - If you inject a problem, briefly describe how (type and level of noise/blur).
 
-2. Blur Comparison: Averaging vs Gaussian (10–15 min)
-   - Apply an averaging blur and a Gaussian blur with the same kernel size (e.g., 21×21).
-   - Keep sigma for Gaussian reasonable (e.g., 10).
-   - Save as `results/avg_blur.png` and `results/gauss_blur.png`.
-   - Write 2–3 sentences comparing visual differences (edges, artifacts, smoothness).
+2. Baseline & Diagnostics
+   - Show the original image(s) and any problem-injected version(s).
+   - Optionally visualize helpful diagnostics (e.g., histogram, gradient magnitude) to motivate your approach.
 
-3. Salt-and-Pepper Noise + Median Filtering (10–15 min)
-   - Add salt-and-pepper noise to the grayscale image (e.g., 1–2% pixels flipped to 0 or 255).
-   - Denoise using a median filter (e.g., 5×5) in `median_filter.py`.
-   - Save `results/noisy.png` and `results/median_denoised.png`.
-   - Briefly note why median performs better than averaging for this noise type.
+3. Competing Filters (choose at least two for the same goal)
+   - Examples: Averaging vs Gaussian (denoise/blur), Median vs Gaussian (salt-and-pepper), Sobel vs Laplacian (edges), Sharpen vs Unsharp-Mask style (edge/detail).
+   - Apply both approaches and save results. Keep the problem and evaluation consistent across methods.
 
-4. Edge Detection: Sobel vs Laplacian (15–20 min)
-   - Use `sobel_filter.py` to compute `sobel_x` and `sobel_y`; combine with magnitude `sqrt(sobel_x^2 + sobel_y^2)`.
-   - Use `laplacian_filter.py` to compute Laplacian edges.
-   - Optionally threshold both to produce binary edge maps.
-   - Save `results/sobel_edges.png` and `results/laplacian_edges.png`.
+4. Parameter Exploration
+   - Vary key parameters (kernel sizes, sigma, thresholds) and save representative outcomes.
+   - Record the exact parameters that produced your best and worst results and explain why.
 
-5. Sharpening After Blur (10–15 min)
-   - Slightly blur the original image (Gaussian, small kernel like 7×7), then apply `sharpening_filter.py`.
-   - Compare with sharpening applied directly to the original.
-   - Save `results/sharp_after_blur.png` and `results/sharp_direct.png`.
-   - Note which looks better and why (ringing, noise amplification, edge clarity).
+5. Custom Kernel
+   - Design your own 3×3 or 5×5 kernel (e.g., custom sharpen/emboss/edge) and apply it using `cv.filter2D` or similar.
+   - Compare its effect to a standard filter for the same goal.
+
+6. Build a Simple Pipeline
+   - Create a small end-to-end pipeline tailored to your problem (e.g., grayscale → denoise → contrast adjust/sharpen → edge detection/threshold).
+   - Demonstrate that it improves the image for the intended task and works on at least one real-life image.
+
+7. Comparison & Reflection
+   - For each comparison (e.g., blur vs blur, edge vs edge, sharpening approaches), write 2–3 insights about trade-offs and visual quality.
+   - Note the challenges you faced (artifacts, parameter sensitivity, runtime, generalization) and how you addressed them.
 
 ### Deliverables
 
-- Images saved under `results/` for each task as specified.
-- A short `HOMEWORK.md` (5–8 bullet points) summarizing:
+- `results/` folder containing:
+  - Original and problem-injected images (if used)
+  - Outputs of each competing filter and your pipeline
+  - Output from your custom kernel
+- A short `HOMEWORK.md` (bullet points are fine) including:
   - Parameters used (kernel sizes, sigma, thresholds)
-  - 2–3 insights from each comparison (blur vs blur, edges, sharpening)
-  - Any challenges or questions
+  - 2–3 insights per comparison and a one-paragraph pipeline summary
+  - Challenges you faced and how you iterated (a brief progress log is encouraged)
 
-### Optional Challenge (if time permits)
+### Optional Extensions (if time permits)
 
-- Build a simple pipeline: grayscale → Gaussian blur → Sobel magnitude → threshold. Save as `results/pipeline_edges.png`.
-- Create a 2×3 figure comparing all outputs in one grid (e.g., using matplotlib or `draw_grids.py`).
+- Test your pipeline on a second, different image and note what changed.
+- Use `draw_grids.py` or matplotlib to create a compact comparison figure.
 
 ---
 
