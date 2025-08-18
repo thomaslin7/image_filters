@@ -21,7 +21,7 @@ This repository demonstrates:
    - [Laplacian Filter](#laplacian-filter)
    - [Sobel Filter](#sobel-filter)
 3. [Running the Examples](#-running-the-examples)
-4. [Homework](#-homework)
+4. [Educational Resources](#-educational-resources)
 
 ## 🔬 Fundamentals
 
@@ -185,58 +185,21 @@ Each script will display:
 - **Filtered Image**: The result after applying the filter
 - **Comparison**: Side-by-side or multi-panel visualization
 
-## 📝 Homework
+## 📖 Educational Resources
 
-Complete the following tasks to practice 2D convolution and classic image filters. Aim to finish in 60–90 minutes.
+### Key Concepts Covered
 
-### Instructions
+1. **Spatial Domain Filtering**: Direct pixel manipulation
+2. **Kernel Design**: How different matrices produce different effects
+3. **Linear vs Non-linear Filters**: Averaging vs Median filtering
+4. **Edge Detection**: First and second-order derivative methods
 
-- Use `afa_innovation.png` (or your own image) as input.
-- Install dependencies if needed: `pip install opencv-python numpy matplotlib`.
-- Save intermediate results to a `results/` folder (create if missing).
+### Practical Exercises
 
-### Tasks
-
-1. Grayscale Conversion (5–10 min)
-   - Convert the input image to grayscale using `rgb2grayscale.py` or OpenCV's `cv.cvtColor(img, cv.COLOR_BGR2GRAY)`.
-   - Save as `results/grayscale.png`.
-
-2. Blur Comparison: Averaging vs Gaussian (10–15 min)
-   - Apply an averaging blur and a Gaussian blur with the same kernel size (e.g., 21×21).
-   - Keep sigma for Gaussian reasonable (e.g., 10).
-   - Save as `results/avg_blur.png` and `results/gauss_blur.png`.
-   - Write 2–3 sentences comparing visual differences (edges, artifacts, smoothness).
-
-3. Salt-and-Pepper Noise + Median Filtering (10–15 min)
-   - Add salt-and-pepper noise to the grayscale image (e.g., 1–2% pixels flipped to 0 or 255).
-   - Denoise using a median filter (e.g., 5×5) in `median_filter.py`.
-   - Save `results/noisy.png` and `results/median_denoised.png`.
-   - Briefly note why median performs better than averaging for this noise type.
-
-4. Edge Detection: Sobel vs Laplacian (15–20 min)
-   - Use `sobel_filter.py` to compute `sobel_x` and `sobel_y`; combine with magnitude `sqrt(sobel_x^2 + sobel_y^2)`.
-   - Use `laplacian_filter.py` to compute Laplacian edges.
-   - Optionally threshold both to produce binary edge maps.
-   - Save `results/sobel_edges.png` and `results/laplacian_edges.png`.
-
-5. Sharpening After Blur (10–15 min)
-   - Slightly blur the original image (Gaussian, small kernel like 7×7), then apply `sharpening_filter.py`.
-   - Compare with sharpening applied directly to the original.
-   - Save `results/sharp_after_blur.png` and `results/sharp_direct.png`.
-   - Note which looks better and why (ringing, noise amplification, edge clarity).
-
-### Deliverables
-
-- Images saved under `results/` for each task as specified.
-- A short `HOMEWORK.md` (5–8 bullet points) summarizing:
-  - Parameters used (kernel sizes, sigma, thresholds)
-  - 2–3 insights from each comparison (blur vs blur, edges, sharpening)
-  - Any challenges or questions
-
-### Optional Challenge (if time permits)
-
-- Build a simple pipeline: grayscale → Gaussian blur → Sobel magnitude → threshold. Save as `results/pipeline_edges.png`.
-- Create a 2×3 figure comparing all outputs in one grid (e.g., using matplotlib or `draw_grids.py`).
+1. **Kernel Experimentation**: Modify kernel values and observe effects
+2. **Parameter Tuning**: Adjust kernel sizes and sigma values
+3. **Combination Filters**: Apply multiple filters in sequence
+4. **Custom Kernels**: Design filters for specific applications
 
 ---
 
