@@ -191,9 +191,9 @@ Design a creative, student-driven mini-project to solve a real image problem usi
 
 ### Instructions
 
-- Use your own photo (phone/real-life) or a public image; you may also use `afa_innovation.png` for comparison.
+- Use your own photo or a public image; you may also use `afa_innovation.png` for comparison.
 - Define a concrete problem present in the image (e.g., noise, blur, low contrast, weak edges). You can also inject a controlled problem (e.g., add Gaussian noise or salt-and-pepper noise, motion blur, low-light).
-- Work from first principles: you may reference the example scripts, but do not follow them step-by-step. Make design choices and justify them.
+- Work from first principles: you may reference the example scripts, but do not follow them step-by-step. Make design choices and justify them. Why did you pick or design this filter for the problem?
 - Create a `results/` folder to save outputs and a short write-up.
 
 ### Tasks
@@ -204,10 +204,9 @@ Design a creative, student-driven mini-project to solve a real image problem usi
 
 2. Baseline & Diagnostics
    - Show the original image(s) and any problem-injected version(s).
-   - Optionally visualize helpful diagnostics (e.g., histogram, gradient magnitude) to motivate your approach.
 
 3. Competing Filters (choose at least two for the same goal)
-   - Examples: Averaging vs Gaussian (denoise/blur), Median vs Gaussian (salt-and-pepper), Sobel vs Laplacian (edges), Sharpen vs Unsharp-Mask style (edge/detail).
+   - Examples: Averaging vs Gaussian (denoise/blur), Median vs Gaussian (salt-and-pepper), Sobel vs Laplacian (edges).
    - Apply both approaches and save results. Keep the problem and evaluation consistent across methods.
 
 4. Parameter Exploration
@@ -215,7 +214,7 @@ Design a creative, student-driven mini-project to solve a real image problem usi
    - Record the exact parameters that produced your best and worst results and explain why.
 
 5. Custom Kernel
-   - Design your own 3×3 or 5×5 kernel (e.g., custom sharpen/emboss/edge) and apply it using `cv.filter2D` or similar.
+   - Design your own 3×3 or 5×5 kernel (e.g., custom sharpen/emboss/edge/lighting) and apply it using `cv.filter2D` or similar.
    - Compare its effect to a standard filter for the same goal.
 
 6. Build a Simple Pipeline
@@ -223,7 +222,7 @@ Design a creative, student-driven mini-project to solve a real image problem usi
    - Demonstrate that it improves the image for the intended task and works on at least one real-life image.
 
 7. Comparison & Reflection
-   - For each comparison (e.g., blur vs blur, edge vs edge, sharpening approaches), write 2–3 insights about trade-offs and visual quality.
+   - For each comparison, write 2–3 insights about trade-offs and visual quality.
    - Note the challenges you faced (artifacts, parameter sensitivity, runtime, generalization) and how you addressed them.
 
 ### Deliverables
@@ -240,7 +239,7 @@ Design a creative, student-driven mini-project to solve a real image problem usi
 ### Optional Extensions (if time permits)
 
 - Test your pipeline on a second, different image and note what changed.
-- Use `draw_grids.py` or matplotlib to create a compact comparison figure.
+- Briefly discuss whether your filter generalizes well to other images and why.
 
 ---
 
